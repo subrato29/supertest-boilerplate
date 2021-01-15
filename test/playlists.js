@@ -4,7 +4,7 @@ import supertest from 'supertest';
 
 const baseUrl = require('../config/urls.js');
 let apiUtils = require('../lib/apiUtils.js');
-const request = supertest(baseUrl.url.baseUrl);
+const request = supertest(baseUrl.baseUrl);
 
 describe('Playlists', () => {
     it('GET /Get a List of Current Users Playlists', () => {
