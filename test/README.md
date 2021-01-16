@@ -16,5 +16,3 @@ Running the tests:
 -------------------
 ```
 npm run test
-
-For running locally, start webdriver by issuing command "npm run start" in daemon mode.
