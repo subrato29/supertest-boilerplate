@@ -1,8 +1,9 @@
 Author: Subrato Sarkar
 ------------------------------
 ```
-- This is JavaScript based framework to test REStful API
-- supertest-boilerplate
+This is JavaScript based framework to test REStful API
+
+supertest-boilerplate
 
 ````
 
