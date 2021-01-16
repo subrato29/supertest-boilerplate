@@ -1,5 +1,10 @@
 'use strict';
 
 module.exports = {
-    baseUrl : 'https://api.spotify.com'
+    baseUrl : 'https://api.spotify.com',
+    endpoint: {
+        playlists: {
+            list_of_curr_users_playlist: '/v1/me/playlists'
+        }
+    }
 };

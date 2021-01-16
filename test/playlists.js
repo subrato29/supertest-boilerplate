@@ -1,17 +1,22 @@
 'use strict';
 
 import supertest from 'supertest';
+import { expect } from 'chai';
 
-const baseUrl = require('../config/urls.js');
+const urls = require('../config/urls.js');
 let apiUtils = require('../lib/apiUtils.js');
-const request = supertest(baseUrl.baseUrl);
-const commonUtils = require('../lib/commonUtils.js')
+const request = supertest(urls.baseUrl);
 
 describe('Playlists', () => {
-    it('GET /Get a List of Current Users Playlists', () => {
-        const endpoint = '/v1/me/playlists';
+    it('GET /Get a List of Current Users Playlists', (done) => {
+        const endpoint = urls.endpoint.playlists.list_of_curr_users_playlist;
         apiUtils.get(request, endpoint).then((response) => {
-            console.log(response);
+             let total = response.body.total;
+             console.log ('total is: ' + total);
+             expect(total).to.be.greaterThan(10); 
+             done();
+        }).catch((err) => {
+            return Promise.reject(err);
         })
     });
 })
