@@ -7,6 +7,7 @@ const urls = require('../config/urls.js');
 const apiUtils = require('../lib/apiUtils.js');
 const request = supertest(urls.baseUrl);
 const data = require('../data/data.js');
+const commonUtils = require('../lib/commonUtils.js')
 
 describe('Playlists', () => {
     
@@ -58,6 +59,24 @@ describe('Playlists', () => {
         }).catch((err) => {
             return Promise.reject(err);
         });
+    });
+
+    it('POST /Create a Playlist', () => {
+        const user_id = data.user_id;
+        const endpoint = urls.endpoint.playlists.list_of_a_users_playlist + user_id + '/playlists';
+        const request_body = data.request_body;
+        return apiUtils.post(request, endpoint, request_body).then((response) => {
+            let statusCode = response.status;
+            console.log(statusCode);
+            if (statusCode === 201) {
+                let response_body = response.body;
+                commonUtils.log(response_body);
+            } else {
+                throw new Error('Unexpected status code: ' + statusCode);
+            }
+        }).catch((err) => {
+            return Promise.reject(err);
+        })
     });
     
 })
