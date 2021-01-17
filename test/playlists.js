@@ -61,7 +61,7 @@ describe('Playlists', () => {
         });
     });
 
-    it('POST /Create a Playlist', () => {
+    it.skip('POST /Create a Playlist', () => {
         const user_id = data.user_id;
         const endpoint = urls.endpoint.playlists.list_of_a_users_playlist + user_id + '/playlists';
         const request_body = data.request_body.post;
@@ -79,7 +79,7 @@ describe('Playlists', () => {
         })
     });
 
-    it('PUT /Change a Playlist Details', () => {
+    it.skip('PUT /Change a Playlist Details', () => {
         const playlist_id = data.playlist_id_to_update;
         const endpoint = urls.endpoint.playlists.get_a_playlist + playlist_id;
         const request_body = data.request_body.put;
