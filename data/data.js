@@ -15,7 +15,11 @@ module.exports = {
             name: 'UP_Supertest_4',
             description: 'UP_Supertest_4_desc',
             public: true
-        }
+        },
+        post_tracks: [
+            '73y649QhnXdcm6fRdvfraO', 
+            '4iV5W9uYEdYUVa79Axb7Rh'
+        ]
     },
     playlist_id_to_update: '2NaS6XqrzLtEC7dC0uieRl'
 }
