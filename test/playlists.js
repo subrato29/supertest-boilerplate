@@ -64,7 +64,7 @@ describe('Playlists', () => {
     it('POST /Create a Playlist', () => {
         const user_id = data.user_id;
         const endpoint = urls.endpoint.playlists.list_of_a_users_playlist + user_id + '/playlists';
-        const request_body = data.request_body;
+        const request_body = data.request_body.post;
         return apiUtils.post(request, endpoint, request_body).then((response) => {
             let statusCode = response.status;
             console.log(statusCode);
@@ -74,6 +74,19 @@ describe('Playlists', () => {
             } else {
                 throw new Error('Unexpected status code: ' + statusCode);
             }
+        }).catch((err) => {
+            return Promise.reject(err);
+        })
+    });
+
+    it('PUT /Change a Playlist Details', () => {
+        const playlist_id = data.playlist_id_to_update;
+        const endpoint = urls.endpoint.playlists.get_a_playlist + playlist_id;
+        const request_body = data.request_body.put;
+        return apiUtils.put(request, endpoint, request_body).then((response) => {
+            let statusCode = response.status;
+            console.log(statusCode);
+            return expect(statusCode).to.be.equals(200);
         }).catch((err) => {
             return Promise.reject(err);
         })
