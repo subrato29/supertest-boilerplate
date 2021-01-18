@@ -43,10 +43,10 @@ npm install
 Running the tests:
 -------------------
 ```
-- running script without gerenarting html report- npm run test
+running script without gerenarting html report- npm run test
 
-- running script with generating mochawesome html report- npm run test_mocha
+running script with generating mochawesome html report- npm run test_mocha
 
-- running script with generating mocha junit html report- npm run test_junit
+running script with generating mocha junit html report- npm run test_junit
 
 ```
