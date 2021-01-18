@@ -1,5 +1,0 @@
-'use strict';
-
-module.exports = {
-    ACCESS_TOKEN: 'BQCR1d73ownRS27wBwI714UD8MNrM5xmtrNG4oh2idI-qNRaS-5n5CE-AVbzBMFvvvWDg3he6Ys2xnU9E5rIxXcDN3FRVjR_dybfxsU5npZ8UfcmETZZaAh8-xyxjATA3E5doAWjcNLXw8ioaCa9qDqA8Zozun8_BMorVt4YWYDzgOMJ8g-P1X_UdK8ZFQS-2lFJy4gyfpMsuGdeitmVrEk-M0LWbouTUjImB6ezDGDVB8zR_P5WDbt4JlCTx7Zqd4dh0HGVMfxNr3tHNEZLDbVBAxmcZf6teqs'
-}

@@ -1,6 +1,6 @@
 'use strict';
 
-const supertest = require("supertest");
+import faker from 'faker';
 
 module.exports = {
     user_id: 'ssk3j6atfblp74jhkkdgyr5dn',
@@ -14,6 +14,11 @@ module.exports = {
         put: {
             name: 'UP_Supertest_4',
             description: 'UP_Supertest_4_desc',
+            public: true
+        },
+        post_faker: {
+            name: 'Supertest_' + faker.random.number({min:1000, max:9999}),
+            description: 'Supertest_' + faker.random.number({min:1000, max:9999}) + '_desc',
             public: true
         },
         post_tracks: [

@@ -1,16 +1,15 @@
 'use strict';
 
-import supertest from 'supertest';
 import { expect } from 'chai';
+import request from '../config/common';
 
 const urls = require('../config/urls.js');
 const apiUtils = require('../lib/apiUtils.js');
-const request = supertest(urls.baseUrl);
 const data = require('../data/data.js');
-const commonUtils = require('../lib/commonUtils.js')
+const commonUtils = require('../lib/commonUtils.js');
 
 describe('Playlists', () => {
-    
+
     it('GET /Get a List of Current Users Playlists', () => {
         const endpoint = urls.endpoint.playlists.list_of_curr_users_playlist;
         return apiUtils.get(request, endpoint).then((response) => {
@@ -76,7 +75,7 @@ describe('Playlists', () => {
             }
         }).catch((err) => {
             return Promise.reject(err);
-        })
+        });
     });
 
     it('POST /Add Items to a Playlist', () => {
@@ -94,7 +93,7 @@ describe('Playlists', () => {
             }
         }).catch((err) => {
             return Promise.reject(err);
-        })
+        });
     });
 
     it.skip('PUT /Change a Playlist Details', () => {
@@ -107,7 +106,7 @@ describe('Playlists', () => {
             return expect(statusCode).to.be.equals(200);
         }).catch((err) => {
             return Promise.reject(err);
-        })
+        });
     });
 
     it('DELETE /Remove Items from a Playlist', () => {
@@ -124,7 +123,6 @@ describe('Playlists', () => {
             }
         }).catch((err) => {
             Promise.reject(err);
-        })
-    })
-    
+        });
+    });
 })
