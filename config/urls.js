@@ -10,6 +10,12 @@ module.exports = {
             get_a_playlist: '/v1/playlists/',
             remove_items_from_playlist: '/v1/playlists/',
             add_items_to_playlist: '/v1/playlists/'
+        },
+        users_profile: {
+            get_a_users_profile: '/v1/users/'
+        },
+        search: {
+            search_for_an_item: '/v1/search/'
         }
     }
 };

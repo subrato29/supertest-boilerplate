@@ -26,5 +26,11 @@ module.exports = {
             '4iV5W9uYEdYUVa79Axb7Rh'
         ]
     },
-    playlist_id_to_update: '2NaS6XqrzLtEC7dC0uieRl'
+    playlist_id_to_update: '2NaS6XqrzLtEC7dC0uieRl',
+    search: {
+        search_for_an_artist: {
+            q: 'Muse',
+            type: 'track,artist'
+        }
+    }
 }
