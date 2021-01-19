@@ -22,7 +22,9 @@ chai
 
 node.js
 
-faker
+mochawesome
+
+junit-reporter
 
 ```
 
@@ -43,10 +45,10 @@ npm install
 Running the tests:
 -------------------
 ```
-running script without gerenarting html report- npm run test
+Running script without gerenarting html report- npm run test
 
-running script with generating mochawesome html report- npm run test_mocha
+Running script with generating mochawesome html report- npm run test_mocha
 
-running script with generating mocha junit html report- npm run test_junit
+Running script with generating mocha junit html report- npm run test_junit
 
 ```
