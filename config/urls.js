@@ -16,6 +16,9 @@ module.exports = {
         },
         search: {
             search_for_an_item: '/v1/search/'
+        },
+        library: {
+            current_users_saved_album: '/v1/me/albums/contains'
         }
     }
 };
