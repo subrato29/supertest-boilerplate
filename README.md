@@ -6,6 +6,8 @@ This is a JavaScript framework to test REStful API
 
 supertest-boilerplate
 
+Tested API: Spotify web API
+
 ````
 
 Framework built on
